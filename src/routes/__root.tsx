@@ -95,8 +95,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "theme-color", content: "#d62828" },
       { name: "twitter:title", content: "Restaurante Tradição Mineira | Uberlândia" },
       { name: "twitter:description", content: "Buffet de comida mineira e churrasco na brasa no Alto Umuarama, ao lado do Aeroporto de Uberlândia. De terça a domingo, das 10h às 14h30." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/64eb2bf2-4573-482c-ba44-ab7aaf2e6bc0/id-preview-216a860a--2dc918cc-b142-4ba9-99eb-1a056fe59bb6.lovable.app-1785980171822.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/64eb2bf2-4573-482c-ba44-ab7aaf2e6bc0/id-preview-216a860a--2dc918cc-b142-4ba9-99eb-1a056fe59bb6.lovable.app-1785980171822.png" },
+      { property: "og:image", content: "https://tradicaomineira1.lovable.app/og.jpg" },
+      { name: "twitter:image", content: "https://tradicaomineira1.lovable.app/og.jpg" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
