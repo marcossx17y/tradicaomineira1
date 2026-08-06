@@ -2,11 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import heroImg from "@/assets/hero-churrasco.jpg";
 import churrascoImg from "@/assets/churrasco-itens.jpg";
-import logoAsset from "@/assets/logo.png.asset.json";
-import buffetAsset from "@/assets/buffet-real.asset.json";
-import frutasAsset from "@/assets/frutas-saladas.asset.json";
+import logoImg from "@/assets/logo-tradicao-mineira.png";
+import buffetImg from "@/assets/buffet-real.png";
+import frutasImg from "@/assets/frutas-saladas.png";
 
-const SITE = "https://id-preview--2dc918cc-b142-4ba9-99eb-1a056fe59bb6.lovable.app";
+const SITE = import.meta.env.VITE_SITE_URL ?? "https://tradicaomineira1.lovable.app";
 const WHATSAPP =
   "https://wa.me/5534988819978?text=" +
   encodeURIComponent("Olá! Vim pelo site do Tradição Mineira.");
@@ -80,9 +80,9 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "restaurant" },
       { property: "og:url", content: "/" },
       { property: "og:locale", content: "pt_BR" },
-      { property: "og:image", content: `${SITE}${buffetAsset.url}` },
+      { property: "og:image", content: `${SITE}/og.jpg` },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: `${SITE}${buffetAsset.url}` },
+      { name: "twitter:image", content: `${SITE}/og.jpg` },
     ],
     links: [{ rel: "canonical", href: "/" }],
     scripts: [
@@ -96,8 +96,8 @@ export const Route = createFileRoute("/")({
           servesCuisine: ["Comida mineira", "Churrasco", "Buffet self-service"],
           telephone: "+5534988819978",
           priceRange: "$$",
-          image: `${SITE}${buffetAsset.url}`,
-          logo: `${SITE}${logoAsset.url}`,
+          image: `${SITE}/og.jpg`,
+          logo: logoImg,
           hasMap: MAPS,
           address: {
             "@type": "PostalAddress",
@@ -174,7 +174,7 @@ function Index() {
         <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-5 py-3 sm:px-8">
           <a href="#topo" className="flex min-w-0 items-center gap-3">
             <img
-              src={logoAsset.url}
+              src={logoImg}
               alt="Logo do Restaurante Tradição Mineira"
               width={44}
               height={44}
@@ -283,7 +283,7 @@ function Index() {
               </dl>
             </div>
             <img
-              src={buffetAsset.url}
+              src={buffetImg}
               alt="Buffet self-service do Tradição Mineira com saladas, arroz negro e pratos quentes"
               loading="lazy"
               className="aspect-[4/5] w-full rounded-[6px] border border-border object-cover"
@@ -331,7 +331,7 @@ function Index() {
               ))}
             </ul>
             <img
-              src={frutasAsset.url}
+              src={frutasImg}
               alt="Mesa de frutas frescas e saladas coloridas no buffet do Tradição Mineira"
               loading="lazy"
               className="aspect-[4/5] w-full rounded-[6px] border border-border object-cover"
@@ -499,7 +499,7 @@ function Index() {
           <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-8">
             <div className="flex items-center gap-3">
               <img
-                src={logoAsset.url}
+                src={logoImg}
                 alt="Logo do Restaurante Tradição Mineira"
                 width={36}
                 height={36}
