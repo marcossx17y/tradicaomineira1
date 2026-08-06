@@ -84,6 +84,10 @@
   --ring: oklch(0.552 0.211 27.5);
   --whatsapp: oklch(0.752 0.187 149.2);
   --whatsapp-foreground: oklch(1 0 0);
+  --brand: oklch(0.552 0.211 27.5);
+  --brand-deep: oklch(0.435 0.176 27.5);
+  --brand-foreground: oklch(0.991 0.0035 85);
+  --brand-soft: oklch(0.962 0.026 30);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
